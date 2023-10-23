@@ -1,0 +1,39 @@
+$colour-primary: #FF6060;
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    align-items: center;
+    @media screen and (max-width: 767px){
+        width: 100%;
+    }
+   
+    
+}
+
+.kasa-logo {
+    height: 68px;
+    width: 210px;
+    
+    
+}
+
+.listStyle {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 10px;
+    .navOptions {
+        text-decoration: none;
+        color: $colour-primary;
+        font-size: 20px;
+        margin-right: 40px;
+        @media screen and (max-width: 767px){  
+           font-size: 15px;
+        }
+    }
+}

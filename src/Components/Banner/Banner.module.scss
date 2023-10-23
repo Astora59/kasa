@@ -1,0 +1,43 @@
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 767px){  
+        width: 80%;
+        height: 111px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center ;
+        vertical-align: middle;
+        margin: auto;
+    }
+
+
+    &__image {
+        border-radius: 20px 20px 20px 20px;
+        filter: brightness(0.6);
+    }
+
+    &__text {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+
+        @media screen and (max-width: 954px){  
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+        }
+    
+    
+    }
+}
+
+

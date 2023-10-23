@@ -1,0 +1,26 @@
+.footContainer {
+    background-color: black;
+    min-height: 209px;
+    width: 100%;
+    margin: 0;
+    @media screen and (max-width: 767px){
+        width: 100%;
+    }
+
+    img {
+        fill: white;
+        height: 40px;
+    }
+}
+
+
+
+.footContainer__text {
+    color: white;
+    font-size: 25px;
+}
+
+.footer_logo {
+    filter: invert(99%) sepia(37%) saturate(0%) hue-rotate(242deg) brightness(1120%) contrast(100%);
+    margin-top: 30px;
+}
