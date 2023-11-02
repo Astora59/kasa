@@ -20,33 +20,33 @@ export default function FicheLogement() {
 	const {id} = useParams();
 	useEffect(() => {
         async function fetchData() {
-			setImageSlider(house.pictures);
+			
             const response = await fetch("http://localhost:3000/logements.json")
             const data = await response.json()
 			const housefiltered = data.find(item =>item.id === id)
-			console.log(housefiltered)
+			setImageSlider(housefiltered.pictures);
 			if(!housefiltered){
-				navigate("/")
+				navigate("*")
 				return
 			}
             setHouse(housefiltered)
         }
         fetchData();
-    })
+    }, [])
 
 	if(!house){
 		return null
 	}
 
     return(
-        <div>
+        <div className={classes.pageFlex}>
             	<Header/>
 			<Slider imageSlider={imageSlider}/>
 			<main className={classes.accomodation}>
 				<div className={classes.accomodation_content}>
 					<div className={classes.accomodation_content_infos}>
-						<h1>{house.title}</h1>
-						<p>{house.location}</p>
+						<h1 className={classes.houseTitle}>{house.title}</h1>
+						<p className={classes.houseLocation}>{house.location}</p>
 						<div>
 							{house.tags.map((tag, index) => {
 								return (
@@ -64,14 +64,14 @@ export default function FicheLogement() {
 							<img src={house.host.picture} alt="host of this accomodation" />
 						</div>
 							
-						{/* <div className={classes.accomodation_content_host_stars}>
+						 <div className={classes.accomodation_content_host_stars}>
 							{[...Array(5)].map((star, index) => {
 								const ratingValue = index + 1;
 								return (
-									<img key={index} src={ratingValue <= rating ? redStar : greyStar} alt="star" />
+									<img key={index} src={ratingValue <= house.rating ? redStar : greyStar} alt="star" />
 								)
 							})}
-						</div> */}
+						</div>
 					</div>
 				</div>
 				<div className={classes.accomodation_collapse}>

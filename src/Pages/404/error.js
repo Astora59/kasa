@@ -7,7 +7,7 @@ import Footer from "../../Components/Footer/Footer"
 
 export default function Error() {
     return (
-        <div>
+        <div className={classes.pageFlex}>
             <Header />
             <div className={classes.error_infos}>
 				<h1 className={classes.error_404}>404</h1>
