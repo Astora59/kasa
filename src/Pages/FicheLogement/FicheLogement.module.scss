@@ -67,7 +67,7 @@ $color-tertiary : #F7F7F7;
             gap: 5px;
             @media screen and (max-width: 768px){
                 flex-direction: row-reverse;
-                gap: 270px;
+                
                 
             }
             div{
@@ -119,6 +119,7 @@ $color-tertiary : #F7F7F7;
             width: 50%;
             margin-left: 25px;
             margin-right: 25px;
+            margin-bottom: 25px;
             @media screen and (max-width: 768px){  
                 padding-top: 20px;
                 width: 100%;
