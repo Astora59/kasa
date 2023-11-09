@@ -39,6 +39,7 @@ export default function FicheLogement() {
 	}
 
     return(
+	<>
         <div className={classes.pageFlex}>
             	<Header/>
 			<Slider imageSlider={imageSlider}/>
@@ -82,7 +83,7 @@ export default function FicheLogement() {
 					</div>
 					<div className={classes.accomodation_collapse_item}>
 						<Collapse title={'Équipements'}>
-							<ul>
+							<ul className={classes.listCollapse}>
 								{house.equipments.map(equipment => {
 								return <li>{equipment}</li>})}
 							</ul>
@@ -90,7 +91,8 @@ export default function FicheLogement() {
 					</div>	
 				</div>
 			</main>
-			<Footer/>
         </div>
+		<Footer/>
+	</>
     );
 };

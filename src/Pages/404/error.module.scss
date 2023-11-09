@@ -2,6 +2,8 @@ $colour-primary: #FF6060;
 .pageFlex {
     padding-left: 100px;
     padding-right: 100px;
+    max-width: 1440px;
+    margin: auto;
     @media screen and (max-width: 768px){  
         padding-left: 20px;
         padding-right: 20px;

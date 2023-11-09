@@ -20,7 +20,10 @@ $colour-primary: #FF6060;
 .kasa-logo {
     height: 68px;
     width: 210px;
-    
+    @media screen and (max-width: 768px){
+        width: 145px;
+        height: 46.88px;
+    }
     
 }
 
@@ -36,7 +39,7 @@ $colour-primary: #FF6060;
         font-size: 24px;
         margin-left: 57px;
         @media screen and (max-width: 767px){  
-           font-size: 15px;
+           font-size: 12px;
            text-transform: uppercase;
         }
     }

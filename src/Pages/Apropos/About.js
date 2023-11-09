@@ -34,6 +34,7 @@ export default function About() {
     
 
     return(
+		<>
         <main className={classes.about_main}>
             <Header />
             <Banner imageSrc={bgimage2} />
@@ -48,7 +49,8 @@ export default function About() {
 					)}
 				)}
 			</div>
-            <Footer />
         </main>
+	<Footer />
+	</>
     );
 };
