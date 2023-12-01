@@ -4,7 +4,7 @@
     border-radius: 10px;
     text-decoration: none;
     position: relative;
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 768px){
         width: 100%;
         margin: 0;
     }
@@ -13,11 +13,11 @@
     img {
         border-radius: 20px;
         width: 340px;
-        height: 300px;
+        height: 340px;
         object-fit: cover;
-        @media screen and (max-width: 767px){
-            width: 90%;
-            height: 400px;
+        @media screen and (max-width: 768px){
+            width: 100%;
+            height: auto;
         }
         
         

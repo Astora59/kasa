@@ -7,21 +7,25 @@ import About from './Pages/Apropos/About';
 const listRoutes = [
     {
         path: "/",
-        element: <Home />
+        element: <Home />,
+        id: Home
         
     },
     {
         path: "/logement/:id",
-        element: <FicheService />
+        element: <FicheService />,
+        id: FicheService
         
     },
     {
         path: "/about", 
-        element: <About />
+        element: <About />,
+        id: About
     },
     {
         path: "*",
-        element: <Error />
+        element: <Error />,
+        id: Error
     }
 ]
 
@@ -29,7 +33,7 @@ const listRoutes = [
 export function RoutesSite() {
     return (
         <Routes>
-        {listRoutes.map(route => <Route path={route.path} element={route.element} />)}
+        {listRoutes.map(route => <Route path={route.path} element={route.element} key={route.id}/>)}
       </Routes>
     )
 }

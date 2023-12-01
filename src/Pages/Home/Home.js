@@ -9,13 +9,15 @@ import bgimage from "../../Components/Banner/home_title.jpg"
 
 export default function Home() {
     return(
+    <>
         <main className={classes.homeMargin}>
             <Header />
-            <Banner>
-                <img src={bgimage} alt="home page banner"/>
+            <Banner imageSrc={bgimage} altImage="home page banner">
+                <p className={classes.banner__text}>Chez vous, partout et ailleurs</p>
             </Banner>
             <Gallery />
-            <Footer />
         </main>
+        <Footer />
+    </>
     );
 };
