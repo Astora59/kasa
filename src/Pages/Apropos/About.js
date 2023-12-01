@@ -4,7 +4,7 @@ import Banner from "../../Components/Banner/Banner";
 import Collapse from "../../Components/Collapse/Collapse";
 import Footer from "../../Components/Footer/Footer";
 import classes from "./About.module.scss"
-import bgimage2 from "../../Components/Banner/paysage.svg"
+import bgimage2 from "../../Components/Banner/paysage.jpg"
 
 
 export default function About() {

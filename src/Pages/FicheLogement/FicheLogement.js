@@ -69,7 +69,7 @@ export default function FicheLogement() {
 							{[...Array(5)].map((star, index) => {
 								const ratingValue = index + 1;
 								return (
-									<img key={index} src={ratingValue <= house.rating ? redStar : greyStar} alt="star" />
+									<img key={ratingValue} src={ratingValue <= house.rating ? redStar : greyStar} alt="star" />
 								)
 							})}
 						</div>
@@ -85,7 +85,7 @@ export default function FicheLogement() {
 						<Collapse title={'Équipements'}>
 							<ul className={classes.listCollapse}>
 								{house.equipments.map(equipment => {
-								return <li>{equipment}</li>})}
+								return <li key={equipment}>{equipment}</li>})}
 							</ul>
 						</Collapse>
 					</div>	
