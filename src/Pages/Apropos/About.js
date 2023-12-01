@@ -34,10 +34,11 @@ export default function About() {
     
 
     return(
-        <div>
+		<>
+        <main className={classes.about_main}>
             <Header />
-            <Banner img={bgimage2} />
-            <main className='about_main'>
+            <Banner imageSrc={bgimage2} />
+            <div>
 				{aboutDatas.map(data => {
 					return (
 						<div key={data.id} className={classes.about_main_collapse}>
@@ -47,8 +48,9 @@ export default function About() {
 						</div>
 					)}
 				)}
-			</main>
-            <Footer />
-        </div>
+			</div>
+        </main>
+	<Footer />
+	</>
     );
 };
